@@ -1,0 +1,30 @@
+01/11/2024 20:07:43 - INFO - __main__ -   test_log/resnet101_imagenet/calibquant_W4A4_57723
+01/11/2024 20:07:43 - INFO - __main__ -   Namespace(config='./exp/w4a4/rs101/config.yaml', quantized_model_path='resnet101_w4_a4_35795.pth')
+01/11/2024 20:07:43 - INFO - __main__ -   {'quant': {'a_qconfig': {'quantizer': 'LSQFakeQuantize', 'observer': 'MSEObserver', 'bit': 4, 'symmetric': False, 'ch_axis': -1}, 'w_qconfig': {'quantizer': 'AdaRoundFakeQuantize', 'observer': 'MSEObserver', 'bit': 4, 'symmetric': False, 'ch_axis': 0}, 'calibrate': 1024, 'recon': {'batch_size': 32, 'scale_lr': 4e-05, 'warm_up': 0.2, 'weight': 0.01, 'iters': 20000, 'b_range': [20, 2], 'keep_gpu': True, 'round_mode': 'learned_hard_sigmoid', 'drop_prob': 0.5}}, 'model': {'type': 'resnet101', 'kwargs': {'num_classes': 1000}, 'path': '/home/u2208283129/CalibQuant-R101/model_zoo/resnet101_imagenet.pth'}, 'data': {'type': 'imagenet', 'path': '/home/u2208283129/CalibQuant-R101/imagenet', 'batch_size': 256, 'num_workers': 4, 'pin_memory': True, 'input_size': 224, 'test_resize': 256}, 'process': {'seed': 1005}}
+01/11/2024 20:07:43 - INFO - __main__ -   ==> Building quantized model..
+01/11/2024 20:07:43 - INFO - __main__ -   Pretranied model ckpt: model_quantized/resnet101_imagenet_w4_a4/resnet101_w4_a4_35795.pth
+01/11/2024 20:07:43 - INFO - __main__ -   ==> Preparing data..
+01/11/2024 20:07:45 - INFO - imagenet_utils -   finish load datset
+01/11/2024 20:08:00 - INFO - __main__ -   ==> Validate Accuracy..
+01/11/2024 20:08:06 - INFO - imagenet_utils -   test: [batch: 0/196 ] | Loss: 0.596 | Acc: 84.375% (216/256)/ 96.094% (246/256)
+01/11/2024 20:08:15 - INFO - imagenet_utils -   test: [batch: 10/196 ] | Loss: 0.775 | Acc: 79.759% (2246/2816)/ 94.673% (2666/2816)
+01/11/2024 20:08:27 - INFO - imagenet_utils -   test: [batch: 20/196 ] | Loss: 0.781 | Acc: 79.520% (4275/5376)/ 94.364% (5073/5376)
+01/11/2024 20:08:37 - INFO - imagenet_utils -   test: [batch: 30/196 ] | Loss: 0.743 | Acc: 80.922% (6422/7936)/ 94.670% (7513/7936)
+01/11/2024 20:08:48 - INFO - imagenet_utils -   test: [batch: 40/196 ] | Loss: 0.784 | Acc: 79.630% (8358/10496)/ 94.569% (9926/10496)
+01/11/2024 20:08:58 - INFO - imagenet_utils -   test: [batch: 50/196 ] | Loss: 0.778 | Acc: 79.642% (10398/13056)/ 94.792% (12376/13056)
+01/11/2024 20:09:08 - INFO - imagenet_utils -   test: [batch: 60/196 ] | Loss: 0.793 | Acc: 79.201% (12368/15616)/ 94.826% (14808/15616)
+01/11/2024 20:09:18 - INFO - imagenet_utils -   test: [batch: 70/196 ] | Loss: 0.777 | Acc: 79.539% (14457/18176)/ 95.026% (17272/18176)
+01/11/2024 20:09:29 - INFO - imagenet_utils -   test: [batch: 80/196 ] | Loss: 0.801 | Acc: 79.036% (16389/20736)/ 94.772% (19652/20736)
+01/11/2024 20:09:39 - INFO - imagenet_utils -   test: [batch: 90/196 ] | Loss: 0.855 | Acc: 77.889% (18145/23296)/ 94.063% (21913/23296)
+01/11/2024 20:09:49 - INFO - imagenet_utils -   test: [batch: 100/196 ] | Loss: 0.909 | Acc: 76.686% (19828/25856)/ 93.425% (24156/25856)
+01/11/2024 20:09:59 - INFO - imagenet_utils -   test: [batch: 110/196 ] | Loss: 0.933 | Acc: 76.270% (21673/28416)/ 93.148% (26469/28416)
+01/11/2024 20:10:09 - INFO - imagenet_utils -   test: [batch: 120/196 ] | Loss: 0.951 | Acc: 76.049% (23557/30976)/ 92.882% (28771/30976)
+01/11/2024 20:10:18 - INFO - imagenet_utils -   test: [batch: 130/196 ] | Loss: 0.978 | Acc: 75.331% (25263/33536)/ 92.578% (31047/33536)
+01/11/2024 20:10:29 - INFO - imagenet_utils -   test: [batch: 140/196 ] | Loss: 0.999 | Acc: 74.892% (27033/36096)/ 92.348% (33334/36096)
+01/11/2024 20:10:38 - INFO - imagenet_utils -   test: [batch: 150/196 ] | Loss: 1.020 | Acc: 74.480% (28791/38656)/ 92.037% (35578/38656)
+01/11/2024 20:10:49 - INFO - imagenet_utils -   test: [batch: 160/196 ] | Loss: 1.040 | Acc: 74.097% (30540/41216)/ 91.775% (37826/41216)
+01/11/2024 20:10:58 - INFO - imagenet_utils -   test: [batch: 170/196 ] | Loss: 1.056 | Acc: 73.712% (32268/43776)/ 91.580% (40090/43776)
+01/11/2024 20:11:09 - INFO - imagenet_utils -   test: [batch: 180/196 ] | Loss: 1.071 | Acc: 73.343% (33984/46336)/ 91.413% (42357/46336)
+01/11/2024 20:11:18 - INFO - imagenet_utils -   test: [batch: 190/196 ] | Loss: 1.070 | Acc: 73.335% (35858/48896)/ 91.447% (44714/48896)
+01/11/2024 20:11:23 - INFO - imagenet_utils -   test: [batch: 195/196 ] | Loss: 1.068 | Acc: 73.448% (36724/50000)/ 91.498% (45749/50000)
+01/11/2024 20:11:23 - INFO - imagenet_utils -   Final accuracy: 73.448
