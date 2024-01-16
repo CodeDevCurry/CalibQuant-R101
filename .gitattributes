@@ -1,1 +1,2 @@
 model_zoo/* filter=lfs diff=lfs merge=lfs -text
+model_quantized/resnet101_imagenet_w4_a4/resnet101_w4_a4_57283.pth filter=lfs diff=lfs merge=lfs -text
